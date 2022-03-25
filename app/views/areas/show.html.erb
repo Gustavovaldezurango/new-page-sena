@@ -1,0 +1,52 @@
+<head>
+  <%= stylesheet_link_tag "areas" %>
+</head>
+
+<body>
+ 
+    <nav id="nav-area">
+        <section id="Index-Logo-area"><%= image_tag("logo.png", width: "80", height: "60")%></section>
+        <section id="Index-Salir-area">
+        <div id="Texto-Salir-area">
+                <%= link_to "Cerrar Sesion", destroy_user_session_path, method: :delete %>
+            </div>
+            
+        </section>
+    </nav>
+
+    <main id="main-area" >
+        <section class="Container-Lista-area">
+            <div id="Titulo-Menu-area">
+                <h2>Titulo</h2>
+            </div>
+            <div id="Menu">
+                <ul class="area-Listas">
+                    
+                    <li class="Lista1-area"> <%= link_to "Nueva Area",  new_area_path, method: :get %></li>
+                    
+                </ul>
+                <div id="volver-area">
+                <%= link_to "volver", areas_path, method: :get %>
+                 </div>
+                </div>
+            
+        </section>
+
+        <section id="Index-Bienvenida-area">
+            <p>
+                <strong>Codigo:</strong>
+                <%= @area.codigo_area %>
+            </p>
+      
+            <p>
+                <strong>nombre:</strong>
+                <%=  @area.nombre_area %>
+            s</p>
+        </section>
+        
+    </main>
+
+  
+</body>
+</html> 
+

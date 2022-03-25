@@ -1,0 +1,14 @@
+
+<tr>
+    <td> <%= area.codigo_area %> </td>
+    <td> <%= area.nombre_area %> </td>
+    <td><%= link_to "show",  area_path(area.id) %></td>
+    <td><%= link_to 'Destroy', area,
+              data: {
+                "turbo-method": :delete,
+                controller: "confirmation",
+                "confirmation-message-value": 'Are you sure?',
+                action: "confirmation#confirm"
+              } %></td>
+    
+</tr>
